@@ -1,0 +1,21 @@
+<H1>Todo</H1>
+<form (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm">
+<div class="form-group">
+    <label for="movieName"><b>Movie Name</b></label>
+    <input type="text" [(ngModel)]="todo.movieName" name="movieName" class="form-control" placeholder="Enter Movie Name" required>
+</div>
+
+<div class="form-group">
+    <label for="discription"><b>Description</b></label>
+    <input type="text" [(ngModel)]="todo.description" name="description" class="form-control" vplaceholder="Enter description" minlength="5"
+    required>
+</div>
+
+<div class="form-group">
+    <label for="releaseDate"><b>Release Date</b></label>
+    <input type="date" [ngModel]="todo.releaseDate | date:'yyyy-MM-dd'" (ngModelChange)="todo.releaseDate = $event"
+        class="form-control" name="releaseDate" placeholder="Enter release date" required>
+</div>
+
+<button type="submit" class="btn btn-success">Save</button>
+</form>

@@ -1,0 +1,25 @@
+<H1 style="text-align:center">LOGIN !</H1>
+<div class="container">
+
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+    <div>
+        <tr>
+            <td><label for="email" class="mr-sm-2">Username:</label></td>
+            <td><input type="text" name="username" size=25 class="form-control mb-2 mr-sm-2" id="pwd1"
+                    placeholder="Enter username" [(ngModel)]="username"></td>
+        </tr>
+
+        <tr>
+            <td><label for="email" class="mr-sm-2">Password:</label></td>
+            <td><input type="password" size=25 name="password" class="form-control mb-2 mr-sm-2" id="pwd2"
+                    placeholder="Enter password" [(ngModel)]="password"></td>
+        </tr>
+
+
+        <div class="center">
+            <!-- <button (click)=handleLogin() class="btn btn-primary mb-2">Login</button> -->
+            <button (click)=handleBasicAuthLogin() class="btn btn-primary mb-2">Login</button>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,23 @@
+
+<H1 style="text-align:center">WELCOME !</H1>
+
+
+<div *ngIf="getErrorMessage" class="container" style="text-align:center"> 
+    <H2>Error</H2>
+    {{getErrorMessage}} 
+</div>
+
+<div class="container" style="text-align:center"> 
+    {{name}} !  You can manage your todo <a routerLink="/todos">here</a>
+</div>
+
+<div class="container" style="text-align:center"> 
+    Get Welcome Message!
+    <button (click)="getPathVariableMessage()" class="btn btn-success">Get Message</button>
+</div>
+
+<div *ngIf="getWelcomeMessage" class="container" style="text-align:center"> 
+     <H3>message is here</H3>
+     {{getWelcomeMessage}} 
+</div>
+
